@@ -2,7 +2,7 @@
     "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.16",
     "version": "1.0.0",
-    "id": "{{d1ed2cf0-eb39-4a92-bde8-1bcbfc8933d4}}",
+    "id": "d1ed2cf0-eb39-4a92-bde8-1bcbfc8933d4",
     "packageName": "com.attendance.tracker",
     "developer": {
         "name": "Attendance Tracker",
@@ -25,7 +25,7 @@
     "accentColor": "#4F46E5",
     "configurableTabs": [
         {
-            "configurationUrl": "https://{{DOMAIN}}/config",
+            "configurationUrl": "https://dev-rtw.pages.dev//config",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team",
@@ -37,8 +37,8 @@
         {
             "entityId": "attendance",
             "name": "Attendance",
-            "contentUrl": "https://azrtw.pages.dev/",
-            "websiteUrl": "https://azrtw.pages.dev/",
+            "contentUrl": "https://dev-rtw.pages.dev/",
+            "websiteUrl": "https://dev-rtw.pages.dev/",
             "scopes": [
                 "personal"
             ]
@@ -49,6 +49,6 @@
         "messageTeamMembers"
     ],
     "validDomains": [
-        "{{dev}}"
+        "dev-rtw.pages.dev"
     ]
 }
