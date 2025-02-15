@@ -1,0 +1,54 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "{{d1ed2cf0-eb39-4a92-bde8-1bcbfc8933d4}}",
+    "packageName": "com.attendance.tracker",
+    "developer": {
+        "name": "Attendance Tracker",
+        "websiteUrl": "https://prakaash.netlify.app/",
+        "privacyUrl": "https://prakaash.netlify.app/privacy",
+        "termsOfUseUrl": "https://prakaash.netlify.app/terms"
+    },
+    "name": {
+        "short": "Attendance Tracker",
+        "full": "Attendance Tracker - Track Your Office Attendance"
+    },
+    "description": {
+        "short": "Track your office attendance and generate reports",
+        "full": "Track your office attendance, mark holidays, and generate monthly/yearly reports with attendance percentage calculations."
+    },
+    "icons": {
+        "outline": "outline.png",
+        "color": "color.png"
+    },
+    "accentColor": "#4F46E5",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://{{DOMAIN}}/config",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team",
+                "groupchat"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "attendance",
+            "name": "Attendance",
+            "contentUrl": "https://azrtw.pages.dev/",
+            "websiteUrl": "https://azrtw.pages.dev/",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "{{dev}}"
+    ]
+}
