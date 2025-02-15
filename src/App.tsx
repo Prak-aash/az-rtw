@@ -6,7 +6,7 @@ import { YearlyReport } from './Report';
 import { TeamsWrapper } from './components/TeamsWrapper';
 
 function App() {
-  console.clear(); console.info("Crafted By Prakaash Murugesan! ❤️ : https://prakaash.netlify.app/")
+  console.clear(); console.info("Tested By Prakaash Murugesan! ❤️ : https://prakaash.netlify.app/")
 
   const [selectedDates, setSelectedDates] = useState<{
     workingDays: Set<string>;
