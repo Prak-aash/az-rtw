@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
-import { app, UserInfo } from '@microsoft/teams-js';
+import { app } from '@microsoft/teams-js';
 
 interface TeamsWrapperProps {
   children: React.ReactNode;
 }
 
 export function TeamsWrapper({ children }: TeamsWrapperProps) {
-  const [user, setUser] = useState<UserInfo | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isTeamsEnvironment, setIsTeamsEnvironment] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
 
   useEffect(() => {
     const initializeTeams = async () => {
@@ -24,7 +24,7 @@ export function TeamsWrapper({ children }: TeamsWrapperProps) {
         setIsTeamsEnvironment(true);
         await app.initialize();
         const context = await app.getContext();
-        setUser(context.user);
+        setIsInitialized(true);
       } catch (error) {
         console.log('Running in standalone mode');
         setIsTeamsEnvironment(false);
@@ -52,8 +52,8 @@ export function TeamsWrapper({ children }: TeamsWrapperProps) {
     return <>{children}</>;
   }
 
-  // In Teams but failed to get user context
-  if (isTeamsEnvironment && !user) {
+  // In Teams but failed to initialize
+  if (isTeamsEnvironment && !isInitialized) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -64,7 +64,7 @@ export function TeamsWrapper({ children }: TeamsWrapperProps) {
     );
   }
 
-  // Successfully running in Teams with user context
+  // Successfully running in Teams
   return (
     <div className="teams-wrapper">
       {children}
