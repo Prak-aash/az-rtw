@@ -397,7 +397,7 @@ function App() {
         <YearlyReport />
       </div>
       <footer className="mt-3 text-center text-gray-500 text-sm opacity-0 hover:opacity-100 transition-opacity duration-300 flex justify-center items-center gap-1">
-        Crafted With <Coffee size={16} className="inline-block" /> n By <a href="https://prakaash.netlify.app/" className="hover:text-indigo-600">Prakaash Murugesan </a>!
+        Crafted With <a href="https://prakaash.netlify.app/" className="hover:text-indigo-600"><Coffee size={16} className="inline-block" /></a>!
       </footer>
     </div>
   );
