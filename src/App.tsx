@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { startOfMonth, endOfMonth, startOfWeek, endOfWeek, eachDayOfInterval, format, isSameMonth, isToday, addMonths, subMonths, isWeekend, setMonth, setYear } from 'date-fns';
-import { Contact, Calendar, Clock, Building, Percent, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
+import { Contact, Calendar, Clock, Building, Percent, Coffee, ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { attendanceDB } from './Data';
 import { YearlyReport } from './Report';
 
@@ -210,7 +210,7 @@ function App() {
   const years = [2024, 2025];
 
   return (
-    <div className="min-h-screen bg-gray-50 p-7">
+    <div className="min-h-screen bg-gray-50 p-5">
       <div className="max-w-7xl mx-auto space-y-6">
         <header className="mb-6">
           <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-2">
@@ -396,8 +396,8 @@ function App() {
         </div>
         <YearlyReport />
       </div>
-      <footer className="text-center text-gray-500 text-sm opacity-0 hover:opacity-100 transition-opacity duration-300">
-        Crafted By <a href="https://prakaash.netlify.app/" className="text-indigo-600">Prakaash Murugesan </a>!
+      <footer className="text-center text-gray-500 text-sm opacity-0 hover:opacity-100 transition-opacity duration-300 flex justify-center items-center gap-1">
+        Crafted With <Coffee size={16} className="inline-block" /> n By <a href="https://prakaash.netlify.app/" className="hover:text-indigo-600">Prakaash Murugesan </a>!
       </footer>
     </div>
   );
