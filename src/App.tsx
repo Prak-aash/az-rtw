@@ -208,7 +208,8 @@ function App() {
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
   
-  const years = [2024, 2025];
+  const currentYear = new Date().getFullYear();
+  const years = Array.from({ length: currentYear - 2024 + 2 }, (_, index) => 2024 + index);
 
   return (
     <div className="min-h-screen bg-gray-50 p-4">
