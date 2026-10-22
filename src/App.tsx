@@ -34,7 +34,8 @@ function App() {
     const date = new Date(dateStr);
     return !isWeekend(date) && isSameMonth(date, currentMonth);
   }).length;
-  const requiredWorkingDays = Math.ceil((totalWorkingDays - holidays) * 0.6);
+  // const requiredWorkingDays = Math.ceil((totalWorkingDays - holidays) * 0.6);
+  const requiredWorkingDays = Math.floor((totalWorkingDays - holidays) * 0.6);
   const currentAttendance = Array.from(selectedDates.workingDays).filter(dateStr => {
     const date = new Date(dateStr);
     return !isWeekend(date) && isSameMonth(date, currentMonth);
