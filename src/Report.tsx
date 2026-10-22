@@ -133,10 +133,7 @@ export function YearlyReport() {
   };
 
   const currentYear = new Date().getFullYear();
-  const years = [2024, currentYear];
-  if (currentYear < 2025) {
-    years.push(2025);
-  }
+  const years = Array.from({ length: currentYear - 2024 + 1 },(_, index) => 2024 + index);
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-6">
